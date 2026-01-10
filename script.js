@@ -1,5 +1,7 @@
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+const supa = createClient("https://dvfsdoybqyxpwtqgffub.supabase.co", "sb_publishable_lP5gD4yHS3jLC0VbLv7ldA_TnoMk3gG");
+
 const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s),b=document.body;
-const supa=supabase.createClient("https://dvfsdoybqyxpwtqgffub.supabase.co","sb_publishable_lP5gD4yHS3jLC0VbLv7ldA_TnoMk3gG");
 
 window.handleCredentialResponse=async r=>{try{const u=jwt_decode(r.credential),c=$(".home-inner"),box=document.createElement("div");box.style="display:flex;flex-direction:column;align-items:center;margin-top:20px";const img=Object.assign(document.createElement("img"),{src:u.picture,style:"width:80px;height:80px;border-radius:50%"}),name=Object.assign(document.createElement("span"),{textContent:u.name,style:"margin-top:10px;font-weight:bold"});box.append(img,name);c.append(box);await supa.from("users").upsert([{id:u.sub,name:u.name,avatar_url:u.picture,created_at:new Date().toISOString()}]);}catch(e){console.error(e)}};
 
