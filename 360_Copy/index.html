@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MKEV8Q96JB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MKEV8Q96JB');
+</script>
+  <meta charset="UTF-8" />
+  <title>360</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#3b82f6" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="icon" href="https://codehs.com/uploads/ac78732bc7223be79e7a83066c1169b1"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="cursor-dot"></div>
+  <div class="cursor-trail"></div>
+
+  <button class="sidebar-toggle" id="sidebarToggle">☰ Menu</button>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <br>
+      <div id="settingsBtn">⚙️</div>
+    </div>
+    <nav class="nav-list">
+      <div class="nav-item active" data-page="main360">Home</div>
+      <div class="ai" data-link="/ai.html">AI Chatbot</div>
+      <div class="weather" data-page="/weather.html">Weather</div>
+      <div class="nav-item" data-page="shortener">URL Shortener</div>
+      <div class="nav-item" data-page="stocks">Stocks</div>
+    </nav>
+    <footer class="sidebar-footer">360 · Flat Inc. · 2026</footer>
+  </aside>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="overlay" id="settingsOverlay"></div>
+
+  <section class="settings-panel" id="settingsPanel">
+    <h3>Appearance</h3>
+    <div class="settings-row">
+      <div class="settings-label">Theme</div>
+      <div class="theme-swatches">
+        <div class="swatch" data-theme="ocean"></div>
+        <div class="swatch" data-theme="midnight"></div>
+        <div class="swatch" data-theme="sunset"></div>
+        <div class="swatch" data-theme="mint"></div>
+        <div class="swatch" data-theme="neon"></div>
+        <div class="swatch" data-theme="mono"></div>
+      </div>
+    </div>
+    <div class="settings-row">
+      <div class="settings-label">Mode</div>
+      <label>Dark mode <input type="checkbox" id="darkToggle" /></label>
+    </div>
+  </section>
+
+  <main class="main">
+    <!-- Home -->
+    <section class="page active" id="page-main360">
+      <div class="home-inner">
+        <div class="clock-pill">
+          <span id="clockTime">--:--</span>
+          <small id="clockDate">Loading...</small>
+        </div>
+        <div class="logo-main"><span>360</span></div>
+        <div class="weather-chip">
+          <span>Weather:</span>
+          <span id="homeWeatherText">Loading...</span>
+        </div>
+        <label class="temp-toggle">
+          <input type="checkbox" id="tempToggle" />
+          <span>°C / °F</span>
+        </label>
+        <div class="search-shell">
+          <div class="gcse-search"></div>
+        </div>
+        <div id="g_id_onload"
+             data-client_id="1005132717258-eekf4ab0tp00i1k8gcfqa6ettemllnj6.apps.googleusercontent.com"
+             data-callback="handleCredentialResponse"
+             data-auto_prompt="false"></div>
+        <div class="g_id_signin"
+             data-type="standard"
+             data-size="large"
+             data-theme="outline"
+             data-text="sign_in_with"
+             data-shape="pill"
+             data-logo_alignment="left"></div>
+        <div id="musicToggle">🔈 Music</div>
+        <audio id="bgMusic" src="https://jetta.vgmtreasurechest.com/soundtracks/minecraft-tricky-trials-original-game-soundtrack-2024/amgwqpah/12.%20Precipice.mp3" loop hidden></audio>
+      </div>
+    </section>
+
+    <!-- Weather -->
+    <section class="page" id="page-weather">
+      <button class="back-btn top-right">← Back</button>
+      <br><br>
+      <h2>🌦️ Weather</h2>
+      <br><br>
+      <form id="weatherForm" class="weather-form">
+        <input id="city" placeholder="Enter city..." required />
+        <button type="submit">Check</button>
+      </form>
+      <br>
+      <div id="weatherContent" class="weather-output">Waiting for input...</div>
+      <div id="map" class="weather-map"></div>
+      <p class="muted">Powered by OpenStreetMap</p>
+    </section>
+
+    <!-- URL Shortener -->
+    <section class="page" id="page-shortener">
+      <button class="back-btn top-right">← Back</button>
+      <br><br>
+      <h2>URL Shortener</h2>
+      <div class="shortener-box">
+        <input id="shortInput" placeholder="Paste URL..." />
+        <button id="shortBtn">Shorten</button>
+      </div>
+      <div id="shortResult">No link yet.</div>
+    </section>
+
+    <!-- Stocks -->
+    <section class="page" id="page-stocks">
+      <button class="back-btn top-right">← Back</button>
+      <br><br>
+      <h2>📈 Stocks</h2>
+      <form id="stockForm">
+        <input id="ticker" placeholder="Enter ticker (e.g. AAPL)" required />
+        <button type="submit">Check</button>
+      </form>
+      <div id="quote" class="quote"></div>
+      <canvas id="chart"></canvas>
+      <p class="muted">Powered by Alpha Vantage</p>
+    </section>
+  </main>
+
+  <button id="installBtn" class="install-banner" style="display:none;">Install 360</button>
+
+  <!-- Scripts -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+  <script async src="https://cse.google.com/cse.js?cx=e003eb0834b6b4be8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
