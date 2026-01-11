@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Analytics -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKEV8Q96JB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -9,7 +9,6 @@
     gtag('js', new Date());
     gtag('config', 'G-MKEV8Q96JB');
   </script>
-
   <meta charset="UTF-8" />
   <title>360</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,14 +16,14 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="ai-styles.css" />
   <link rel="icon" href="favicon.ico" />
   <link rel="icon" href="https://codehs.com/uploads/ac78732bc7223be79e7a83066c1169b1"/>
-  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
+  <audio id="clickSound" src="https://codehs.com/uploads/86c606773982f9a2329309a306246b60" preload="auto"></audio>
+  <audio id="bgMusic" src="https://codehs.com/uploads/08453784ddd1245d2dda633d4c69fb28" loop hidden></audio>
+
   <div class="cursor-dot"></div>
   <div class="cursor-trail"></div>
 
@@ -99,16 +98,28 @@
              data-shape="pill"
              data-logo_alignment="left"></div>
         <div id="musicToggle">🔈 Music</div>
-        <audio id="bgMusic" src="https://codehs.com/uploads/4433757b3381fa9aa8f6e2448d089dc8" loop hidden></audio>
       </div>
+    </section>
+
+    <!-- Weather -->
+    <section class="page" id="page-weather">
+      <button class="back-btn top-right">← Back</button>
+      <h2>🌦️ Weather</h2>
+      <form id="weatherForm" class="weather-form">
+        <input id="city" placeholder="Enter city..." required />
+        <button type="submit">Check</button>
+      </form>
+      <div id="weatherContent" class="weather-output">Waiting for input...</div>
+      <div id="map" class="weather-map"></div>
+      <p class="muted">Powered by OpenWeatherMap & OpenStreetMap</p>
     </section>
 
     <!-- AI Chatbot -->
     <section class="page" id="page-ai">
-      <button class="back-btn top-right">← Back</button>
-      <br><br>
+      <link rel="stylesheet" href="/ai-styles.css" />
       <h2>AI Chatbot</h2>
       <p id="date"></p>
+      <div class="back" data-page="main360">Home</div>
       <div id="chat"></div>
       <div id="input-area">
         <input type="text" id="userInput" placeholder="Type a message..." />
@@ -116,20 +127,9 @@
       </div>
     </section>
 
-    <!-- Weather -->
-    <section class="page" id="page-weather">
-      <button class="back-btn top-right">← Back</button>
-      <br><br>
-      <iframe src="weather.html" width="100%" height="550px" title="External Page Content">
-        Your browser does not support iframes.
-      </iframe>
-
-    </section>
-
     <!-- URL Shortener -->
     <section class="page" id="page-shortener">
       <button class="back-btn top-right">← Back</button>
-      <br><br>
       <h2>URL Shortener</h2>
       <div class="shortener-box">
         <input id="shortInput" placeholder="Paste URL..." />
@@ -141,14 +141,12 @@
     <!-- Stocks -->
     <section class="page" id="page-stocks">
       <button class="back-btn top-right">← Back</button>
-      <br><br>
       <h2>📈 Stocks</h2>
       <form id="stockForm">
         <input id="ticker" placeholder="Enter ticker (e.g. AAPL)" required />
         <button type="submit">Check</button>
       </form>
       <div id="quote" class="quote"></div>
-      <canvas id="chart"></canvas>
       <p class="muted">Powered by Alpha Vantage</p>
     </section>
   </main>
@@ -159,9 +157,9 @@
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
   <script async src="https://cse.google.com/cse.js?cx=e003eb0834b6b4be8"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="script.js" type="module"></script>
+  <script src="script.js"></script>
 </body>
 </html>
