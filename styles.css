@@ -170,4 +170,31 @@ body.dark #shortResult { color: var(--mutd); }
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
+  .temp-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s ease;
+}
+
+body.dark .temp-toggle {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.temp-toggle input[type="checkbox"] {
+  accent-color: var(--accent);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+}
+.temp-toggle:hover {
+  background: rgba(148, 163, 184, 0.15);
 }
