@@ -21,7 +21,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <audio id="clickSound" src="https://codehs.com/uploads/86c606773982f9a2329309a306246b60" preload="auto"></audio>
+  <audio id="clickSound" src="https://codehs.com/uploads/7458ad2d199dd9783735cf48658bcad7" preload="auto"></audio>
   <audio id="bgMusic" src="https://codehs.com/uploads/08453784ddd1245d2dda633d4c69fb28" loop hidden></audio>
 
   <div class="cursor-dot"></div>
@@ -40,6 +40,10 @@
       <div class="nav-item" data-page="weather">Weather</div>
       <div class="nav-item" data-page="shortener">URL Shortener</div>
       <div class="nav-item" data-page="stocks">Stocks</div>
+
+      <!-- ADDED: Translator button -->
+      <div class="nav-item" data-page="translator">Translator</div>
+
     </nav>
     <footer class="sidebar-footer">360 · Flat Inc. · 2026</footer>
   </aside>
@@ -116,14 +120,52 @@
 
     <!-- AI Chatbot -->
     <section class="page" id="page-ai">
-      <link rel="stylesheet" href="/ai-styles.css" />
       <h2>AI Chatbot</h2>
       <p id="date"></p>
-      <div class="back" data-page="main360">Home</div>
+    
       <div id="chat"></div>
+    
       <div id="input-area">
         <input type="text" id="userInput" placeholder="Type a message..." />
         <button id="sendBtn">Send</button>
+      </div>
+    </section>
+
+
+    <!-- ADDED: Translator Page -->
+    <section class="page" id="page-translator">
+      <button class="back-btn top-right">← Back</button>
+      <h2>🌍 Translator</h2>
+
+      <div id="translator" style="margin-top:20px">
+        <textarea id="translateInput" placeholder="Enter text..." rows="3" style="width:100%"></textarea>
+
+        <div style="margin:10px 0">
+          <label>From:
+            <select id="sourceLang">
+              <option value="auto">Auto</option>
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+              <option value="fr">French</option>
+              <option value="zh">Mandarin</option>
+              <option value="ar">Arabic</option>
+            </select>
+          </label>
+
+          <label style="margin-left:10px">To:
+            <select id="targetLang">
+              <option value="es">Spanish</option>
+              <option value="en">English</option>
+              <option value="fr">French</option>
+              <option value="zh">Mandarin</option>
+              <option value="ar">Arabic</option>
+            </select>
+          </label>
+
+          <button id="translateBtn" style="margin-left:10px">Translate</button>
+        </div>
+
+        <div id="translateResult" style="white-space:pre-wrap;background:#f0f0f0;padding:10px;border-radius:5px;min-height:40px"></div>
       </div>
     </section>
 
