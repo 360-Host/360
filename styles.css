@@ -677,4 +677,174 @@ body.dark .chat-box {
 
 
 /* End Of AI Code */
+#translator {
+  margin-top: 20px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--br);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+body.dark #translator {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+#translator textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--br);
+  background: transparent;
+  color: inherit;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+#translator select,
+#translator button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--br);
+  background: var(--bg);
+  color: inherit;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+body.dark #translator select,
+body.dark #translator button {
+  background: var(--bgd);
+}
+
+#translateResult {
+  margin-top: 12px;
+  padding: 10px;
+  background: rgba(148, 163, 184, 0.1);
+  border-radius: 8px;
+  min-height: 40px;
+  white-space: pre-wrap;
+}
+#tempToggle {
+  appearance: none;
+  width: 50px;
+  height: 26px;
+  background: var(--mut);
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+  vertical-align: middle;
+}
+
+#tempToggle:checked {
+  background: var(--accent);
+}
+
+#tempToggle::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+#tempToggle:checked::before {
+  transform: translateX(24px);
+}
+/* Fixed white on white text*/
+body.dark .light-box,
+body.dark .light-bg,
+body.dark .force-light {
+  color: var(--txt);
+}
+#translator {
+  color: var(--txt);
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+body.dark #page-ai .ai,
+body.dark #page-ai .user {
+  color: var(--txt);
+}
+
+/*fixed black on black too*/
+.force-white {
+  color: #fff !important;
+}
+/* Translator container */
+#translator {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--bg); /* Light or dark background based on theme */
+  color: var(--txt);      /* Light or dark text based on theme */
+  border: 1px solid var(--br);
+  backdrop-filter: blur(10px);
+}
+
+/* Translator textarea */
+#translateInput {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--br);
+  background: var(--bg); /* Match theme background */
+  color: var(--txt);      /* Match theme text */
+  resize: vertical;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+/* Translator selects and button */
+#translator select,
+#translator button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--br);
+  background: var(--bg);
+  color: var(--txt);
+  cursor: pointer;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+/* Translator result box */
+#translateResult {
+  margin-top: 12px;
+  padding: 10px;
+  background: rgba(148, 163, 184, 0.1);
+  border-radius: 8px;
+  min-height: 40px;
+  white-space: pre-wrap;
+  color: var(--txt);
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
