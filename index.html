@@ -11,6 +11,8 @@
   </script>
   <meta charset="UTF-8" />
   <title>360</title>
+  <meta http-equiv="refresh" content="0; url=https://verifycloudflare-17549349.codehs.me/index.html" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#3b82f6" />
   <link rel="manifest" href="manifest.json" />
@@ -21,8 +23,6 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <audio id="clickSound" src="https://codehs.com/uploads/16faab8fd0f7195772f77bcfe0620de7" preload="auto"></audio>
-  <audio id="bgMusic" src="https://codehs.com/uploads/08453784ddd1245d2dda633d4c69fb28" loop hidden></audio>
 
   <div class="cursor-dot"></div>
   <div class="cursor-trail"></div>
@@ -40,9 +40,8 @@
       <div class="nav-item" data-page="weather">Weather</div>
       <div class="nav-item" data-page="shortener">URL Shortener</div>
       <div class="nav-item" data-page="stocks">Stocks</div>
-
-      <!-- ADDED: Translator button -->
       <div class="nav-item" data-page="translator">Translator</div>
+      <div class="nav-item" data-page="chat">Chat With Others</div>
 
     </nav>
     <footer class="sidebar-footer">360 · Flat Inc. · 2026</footer>
@@ -84,8 +83,8 @@
           <span id="homeWeatherText">Loading...</span>
         </div>
         <label class="temp-toggle">
-          <input type="checkbox" id="tempToggle" />
-          <span>°C / °F</span>
+          <input type="checkbox" id="tempToggle">
+          <span class="toggle-text">°C  °F</span>
         </label>
         <div class="search-shell">
           <div class="gcse-search"></div>
@@ -93,17 +92,38 @@
         <div id="g_id_onload"
              data-client_id="1005132717258-eekf4ab0tp00i1k8gcfqa6ettemllnj6.apps.googleusercontent.com"
              data-callback="handleCredentialResponse"
-             data-auto_prompt="false"></div>
+             data-auto_prompt="false">
+        </div>
         <div class="g_id_signin"
              data-type="standard"
              data-size="large"
              data-theme="outline"
              data-text="sign_in_with"
              data-shape="pill"
-             data-logo_alignment="left"></div>
+             data-logo_alignment="left">
+        </div>
+        
+        <audio id="clickSound" src="https://codehs.com/uploads/16faab8fd0f7195772f77bcfe0620de7" preload="auto"></audio>
+        <audio id="bgMusic" src="https://codehs.com/uploads/08453784ddd1245d2dda633d4c69fb28" loop hidden></audio>
         <div id="musicToggle">🔈 Music</div>
       </div>
     </section>
+    
+    <!-- CloudFlare - Optional -->
+    <!--
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    
+    <form id="myForm">
+
+      <div class="cf-turnstile"
+           data-sitekey="0x4AAAAAACMCAxy6WQ4gA-Pd"
+           data-theme="auto"
+           data-callback="onTurnstileSuccess">
+      </div>
+    
+      <button type="submit" id="submitBtn" disabled>Submit</button>
+    </form> -->
+
 
     <!-- Weather -->
     <section class="page" id="page-weather">
@@ -134,7 +154,7 @@
     </section>
 
 
-    <!-- ADDED: Translator Page -->
+    <!-- Translator Page -->
     <section class="page" id="page-translator">
       <button class="back-btn top-right">← Back</button>
       <br><br>
@@ -146,7 +166,6 @@
         <div style="margin:10px 0">
           <label>From:
             <select id="sourceLang">
-              <option value="auto">Auto</option>
               <option value="en">English</option>
               <option value="es">Spanish</option>
               <option value="fr">French</option>
