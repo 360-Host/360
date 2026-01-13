@@ -11,15 +11,6 @@
   <link rel="icon" href="favicon.ico" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-  <script>
-    const p = new URLSearchParams(location.search);
-    if (p.get("verified") !== "true") {
-      location.href = "https://verifycloudflare-17549349.codehs.me/index.html";
-    } else {
-      history.replaceState({}, document.title, location.pathname);
-    }
-  </script>
-
 </head>
 <body>
   <div class="cursor-dot"></div><div class="cursor-trail"></div>
