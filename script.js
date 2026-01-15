@@ -97,6 +97,40 @@ window.addEventListener("DOMContentLoaded", () => {
     select("#sidebar").classList.toggle("open");
     select("#overlay").classList.toggle("active");
   };
+  let lastCity = null;
+
+const weatherForm = document.querySelector("#weatherForm");
+const weatherOutput = document.querySelector("#weatherContent");
+
+if (weatherForm) {
+  weatherForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const city = document.querySelector("#city").value.trim();
+    if (!city || city === lastCity) return;
+
+    lastCity = city;
+    weatherOutput.textContent = "Loading weather...";
+
+    try {
+      const apiKey = "c235c3c0b8aa90de94301809df9a50e4"; 
+      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`);
+      const data = await res.json();
+
+      if (data.cod !== 200) {
+        weatherOutput.textContent = `Error: ${data.message}`;
+        return;
+      }
+
+      const temp = data.main.temp;
+      const desc = data.weather[0].description;
+      weatherOutput.textContent = `Weather in ${city}: ${temp}°C, ${desc}`;
+    } catch (err) {
+      weatherOutput.textContent = "Failed to fetch weather.";
+    }
+  });
+}
+
 });
 
 
@@ -699,3 +733,17 @@ chatSupabase.auth.onAuthStateChange((event, session) => {
     logoutBtn.style.display = "none";
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
