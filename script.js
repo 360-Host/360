@@ -699,17 +699,3 @@ chatSupabase.auth.onAuthStateChange((event, session) => {
     logoutBtn.style.display = "none";
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
