@@ -448,11 +448,18 @@ body.dark .chat-box {
 }
 
 #musicToggle {
-  background: rgba(148, 163, 184, .15);
-  padding: 8px 12px;
+  display: inline-block;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background: #3b82f6;
+  color: white;
   border-radius: 8px;
   cursor: pointer;
-  transition: .2s;
+  font-weight: bold;
+  z-index: 1000;
+  white-space: nowrap;
 }
 
 #musicToggle:hover {
