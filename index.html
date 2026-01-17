@@ -282,6 +282,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="script.js"></script>
+  <script>
+  const map = L.map('map').setView([40.7128, -74.0060], 10); // Default to NYC
+
+  const baseLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Fullscreen control
+  map.addControl(new L.Control.Fullscreen());
+
+  // MiniMap
+  const miniMap = new L.Control.MiniMap(baseLayer, {
+    toggleDisplay: true,
+    minimized: false
+  }).addTo(map);
+
+  // Locate control
+  L.control.locate().addTo(map);
+
+  // OpenWeatherMap layers (replace with your API key)
+  const owmApiKey = 'YOUR_OPENWEATHERMAP_API_KEY';
+
+  L.OWM.clouds({ opacity: 0.5, appId: owmApiKey }).addTo(map);
+  L.OWM.temperature({ opacity: 0.5, appId: owmApiKey }).addTo(map);
+  L.OWM.wind({ opacity: 0.5, appId: owmApiKey }).addTo(map);
+</script>
+
 </body>
 </html>
 
