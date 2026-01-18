@@ -321,6 +321,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   L.OWM.temperature({ opacity: 0.5, appId: owmApiKey }).addTo(map);
   L.OWM.wind({ opacity: 0.5, appId: owmApiKey }).addTo(map);
 </script>
+<script>
+  fetch('https://api.rss2json.com/v1/api.json?rss_url=https://news.google.com/rss')
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('news-feed');
+      data.items.slice(0, 5).forEach(item => {
+        const el = document.createElement('div');
+        el.innerHTML = `<a href="${item.link}" target="_blank">${item.title}</a>`;
+        el.className = 'news-item';
+        container.appendChild(el);
+      });
+    });
+</script>
 
 </body>
 </html>
