@@ -1033,6 +1033,27 @@ body.dark #page-ai .user {
 #bg-settings button:hover {
   background: #009e8e;
 }
+.news-widget {
+  background: #111;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #eee;
+  font-family: 'Inter', sans-serif;
+}
+
+.news-item {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.news-item a {
+  color: #00bfa6;
+  text-decoration: none;
+}
+
+.news-item a:hover {
+  text-decoration: underline;
+}
 
 
 
