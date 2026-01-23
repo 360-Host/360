@@ -8,6 +8,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NZHQGS65');</script>
 <!-- End Google Tag Manager -->
+<!-- Microsoft Clarity !-->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -24,7 +25,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <!-- Basic metadata stuff! -->
   <meta charset="UTF-8" />
   <title>360</title>
-  <meta name="description" content="360 is a multi-tool browser built for more than search — with weather, maps, translation, stocks, sign-in systems, URL shorteners, and an AI chatbot.">
+  <meta name="description" content="360 is a multi-tool browser built for more than just search — with weather, maps, translation, stocks, sign-in systems, URL shorteners, an AI chatbot and more, all in 1 place!">
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#3b82f6" />
@@ -74,7 +75,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Invisible Description !-->
   <div style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;">
   <h1>360 — A Multi-Tool Browser</h1>
-  <p>360 is a browser with built-in tools like weather, maps, translation, stocks, sign-in systems, URL shorteners, and an AI chatbot — all in one place.</p>
+  <p>360 is a browser with built-in tools like weather, maps, translation, stocks, sign-in systems, URL shorteners, an AI chatbot and more all in one place!</p>
 </div>
   <!-- Cursor!-->
   <div class="cursor-dot"></div><div class="cursor-trail"></div>
@@ -111,10 +112,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div id="bg-settings" class="settings-section">
   <h3>Background Settings</h3>
-  <label for="bgUpload">Upload Image:</label>
+  <label for="bgUpload">Upload An Image:</label>
   <input type="file" id="bgUpload" accept="image/*">
 
-  <label for="bgUrl">Or Paste Image URL:</label>
+  <label for="bgUrl">Or Paste An Image URL:</label>
   <input type="text" id="bgUrl" placeholder="https://example.com/image.jpg">
 
   <button id="setBgBtn">Set Background</button>
@@ -122,7 +123,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <div id="news-feed" class="news-widget"></div>
     <div class="settings-row">
       <div class="settings-label">Mode</div>
-      <label>Dark mode <input type="checkbox" id="darkToggle" /></label>
+      <label>Dark Theme <input type="checkbox" id="darkToggle" /></label>
     </div>
     <label>
 </label>
@@ -147,13 +148,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!--Sign in UI!-->
   <div id="auth-popup" class="auth-popup hidden">
     <div class="auth-box">
-      <h2>Account Login</h2>
+      <h2>Account Management</h2>
     
       <input id="auth-email" type="email" placeholder="Email">
       <input id="auth-password" type="password" placeholder="Password">
     
-      <button id="auth-login-btn">Log In</button>
-      <button id="auth-signup-btn">Sign Up</button>
+      <button id="auth-login-btn">Log In with your 360 ID</button>
+      <button id="auth-signup-btn">Sign Up for a 360 ID</button>
       <!--Sign in with Google!-->
       <div id="g_id_signin" style="margin-top: 10px;"></div>
       <!-- GitHub Sign-In Button -->
@@ -198,13 +199,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <br><br>
       <h2>🌦️ Weather</h2>
       <form id="weatherForm" class="weather-form">
-        <input id="city" placeholder="Enter city..." required />
-        <button type="submit">Check</button>
+        <input id="city" placeholder="Enter a city..." required />
+        <button type="submit">Check weather!</button>
       </form>
       <br><br>
       <div id="weatherContent" class="weather-output">Waiting for input...</div>
       <div id="map" class="weather-map"></div>
-      <p class="muted">Powered by OpenWeatherMap & OpenStreetMap</p>
+      <p class="muted">Powered by OpenWeatherMap & Leaflet OpenStreetMap</p>
     </section>
     
     <!-- Chat System -->
@@ -216,7 +217,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div id="chat-window"></div>
       <br><br>
       <div id="chat-input-row">
-        <input type="text" id="message-input" placeholder="Type your message..." />
+        <input type="text" id="message-input" placeholder="Type your message! Spamming, cursing, self-promotion or joining on an alt after a ban will result in ban from use of 360 apps." />
         <button id="send-button">Send</button>
       </div>
     </section>
@@ -230,7 +231,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div id="chat"></div>
     
       <div id="input-area">
-        <input type="text" id="userInput" placeholder="Type a message..." />
+        <input type="text" id="userInput" placeholder="Enter a message..." />
         <button id="sendBtn">Send</button>
       </div>
     </section>
@@ -280,9 +281,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2>URL Shortener</h2>
       <div class="shortener-box">
         <input id="shortInput" placeholder="Paste URL..." />
-        <button id="shortBtn">Shorten</button>
+        <button id="shortBtn">Shorten URL!</button>
       </div>
-      <div id="shortResult">No link yet.</div>
+      <div id="shortResult">No link yet...</div>
     </section>
 
     <!-- Stocks -->
@@ -291,8 +292,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <br><br>
       <h2>📈 Stocks</h2>
       <form id="stockForm">
-        <input id="ticker" placeholder="Enter ticker (e.g. AAPL)" required />
-        <button type="submit">Check</button>
+        <input id="ticker" placeholder="Enter stock (e.g. NVDA)" required />
+        <button type="submit">Check Stock</button>
       </form>
       <br><br>
       <div id="quote" class="quote"></div>
