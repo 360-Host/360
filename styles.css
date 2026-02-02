@@ -738,8 +738,6 @@ body.dark #translator button {
   white-space: pre-wrap;
 }
 
-
-
 .temp-toggle {
   position: relative;
   display: inline-block;
@@ -749,8 +747,8 @@ body.dark #translator button {
   position: absolute;
   top: 0;
   left: 0;
-  width: 48px;   /* match your toggle width */
-  height: 26px;  /* match your toggle height */
+  width: 48px;
+  height: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -792,6 +790,11 @@ body.dark #translator button {
   transform: translateX(24px);
 }
 /* Fixed white on white text*/
+body.dark .light-box,
+body.dark .light-bg,
+body.dark .force-light {
+  color: var(--txt);
+}/* Fixed white on white text*/
 body.dark .light-box,
 body.dark .light-bg,
 body.dark .force-light {
