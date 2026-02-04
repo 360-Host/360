@@ -1,84 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCZB3M2PNX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SCZB3M2PNX');
-</script>
-<!-- Microsoft Clarity !-->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "v2xtlul02d");
-</script>
   <!-- Favicon links!-->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" href="https://codehs.com/uploads/e7f4952f10c580a06707f4a9b15f355d" type="image/x-icon">
-
   <!-- Basic metadata stuff! -->
   <meta charset="UTF-8" />
   <title>360</title>
-  <meta name="description" content="360 is a multi-tool browser built for more than just search — with weather, maps, translation, stocks, sign-in systems, URL shorteners, an AI chatbot and more, all in 1 place!">
-
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#3b82f6" />
   <!-- Links !-->
   <link rel="manifest" href="manifest.json" />
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
-<script src="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
-  <!-- Leaflet Plugins -->
-<!-- MiniMap -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet-minimap/dist/Control.MiniMap.min.css" />
-<script src="https://unpkg.com/leaflet-minimap/dist/Control.MiniMap.min.js"></script>
-
-<!-- Fullscreen Control -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet.fullscreen/Control.FullScreen.css" />
-<script src="https://unpkg.com/leaflet.fullscreen/Control.FullScreen.js"></script>
-
-<!-- OpenWeatherMap Plugin -->
-<script src="https://unpkg.com/leaflet-openweathermap/leaflet-openweathermap.js"></script>
-
-<!-- Viewport for Mobile -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- EXTREME METADATA STUFF !-->
-<!-- Description & Author -->
-<meta name="author" content="The Flat Team">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://360-search.com/">
-
-<!-- Open Graph (Universal) -->
-<meta property="og:url" content="https://360-search.com/">
-<meta property="og:description" content="360 is a multi-tool browser built for more than search — with weather, maps, translation, stocks, sign-in systems, URL shorteners, and an AI chatbot.">
-<meta property="og:image" content="https://360-search.com/og-image.jpg">
-<meta property="og:site_name" content="360 |A Multi-Tool Browser">
-<meta property="og:locale" content="en_US">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <script src="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+    <!-- Viewport for Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Description & Author -->
+    <meta name="description" content="360 is a fully prepared to the brim browser with the basics to the examplary for those with more use cases than just searching. We've currently got: Weather; Maps; Translating; Sign in systems; URL Shorteners; Stocks and an A.I. Chatbot! (Please note that 360 was developed in early January 2026 and is still in development.)">
+    <meta name="author" content="The Flat Team">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://360-search.com/">
+    
+    <!-- Open Graph (Universal) -->
+    <meta property="og:url" content="https://360-search.com/">
+    <meta property="og:description" content="360
+    is a fully prepared to the brim browser with the basics to the examplary for those with more use cases than just searching. We've currently got: Weather; Maps; Translating; Sign in systems; URL Shorteners; Stocks and an A.I. Chatbot! (Please note that 360 was developed in early January 2026 and is still in development.)">
+    <meta property="og:image" content="https://360-search.com/og-image.jpg">
+    <meta property="og:site_name" content="360 | A Multi-Tool Browser">
+    <meta property="og:locale" content="en_US">
 
 
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="https://codehs.com/uploads/ebf6f06e11ecebae1f0c6f34c0060288" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
- </head>
+  <!--Cloudflare Script!-->
+    <!--
+    <script>
+      const p = new URLSearchParams(location.search);
+      if (p.get("verified") !== "true") {
+        location.href = "https://verifycloudflare-17549349.codehs.me/index.html";
+      } else {
+        history.replaceState({}, document.title, location.pathname);
+      }
+    </script>
+    -->
+  <!--slash out above script when testing in codehs console to avoid redirects !-->
+</head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZHQGS65"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<!-- Invisible Description !-->
-  <div style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;">
-  <h1>360 — A Multi-Tool Browser</h1>
-  <p>360 is a browser with built-in tools like weather, maps, translation, stocks, sign-in systems, URL shorteners, an AI chatbot and more all in one place!</p>
-</div>
   <!-- Cursor!-->
   <div class="cursor-dot"></div><div class="cursor-trail"></div>
   <!--All menu related settings!-->
@@ -93,26 +65,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="nav-item" data-page="stocks">Stocks</div>
       <div class="nav-item" data-page="translator">Translator</div>
       <div class="nav-item" data-page="chat">Chat With Others</div>
-      <button id="spaceglider-btn">Space Glider</button>
-
     </nav>
-    <!-- Contact Us Link -->
-<div style="text-align: center; margin-top: 20px;">
-  <a href="contact.html" style="
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--a);
-    text-decoration: none;
-    padding: 6px 12px;
-    border-radius: 6px;
-    transition: background 0.2s ease;
-  " onmouseover="this.style.background='rgba(148,163,184,0.15)'" onmouseout="this.style.background='transparent'">
-    Contact Us
-  </a>
-</div>
-
-    <footer class="sidebar-footer">360 · The Flat Team. · 2026</footer>
+    <footer class="sidebar-footer">360 · Flat Inc. · 2026</footer>
   </aside>
   <!--Settings!-->
   <div class="overlay" id="overlay"></div>
@@ -130,29 +84,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="swatch" data-theme="mono"></div>
       </div>
     </div>
-    <div id="bg-settings" class="settings-section">
-  <h3>Background Settings</h3>
-  <label for="bgUpload">Upload An Image:</label>
-  <input type="file" id="bgUpload" accept="image/*">
+    <div class="settings-row">
+      <div class="settings-label">Mode</div>
+      <label>Dark mode <input type="checkbox" id="darkToggle" /></label>
+    </div>
+    <label>
+</label>
 
-  <label for="bgUrl">Or Paste An Image URL:</label>
-  <input type="text" id="bgUrl" placeholder="https://example.com/image.jpg">
-
-  <button id="setBgBtn">Set Background</button>
-</div>
-<!-- <div id="news-feed" class="news-widget"></div> -->
-<div class="settings-row">
-  <div class="settings-label">Mode</div>
-  <label>Dark Theme <input type="checkbox" id="darkToggle" /></label>
-</div>
-<label></label>
-<script>
-(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="BRdiibDliOkF6zJE5y-jB";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-</script>
 
   </section>
- 
-
     <!-- Sign In / Sign Out -->
     <div id="auth-buttons">
       <button id="open-login-btn">Sign In / Sign Up</button>
@@ -167,29 +107,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!--Sign in UI!-->
   <div id="auth-popup" class="auth-popup hidden">
     <div class="auth-box">
-      <h2>Account Management</h2>
+      <h2>Account Login</h2>
     
       <input id="auth-email" type="email" placeholder="Email">
       <input id="auth-password" type="password" placeholder="Password">
     
-      <button id="auth-login-btn">Log In with your 360 ID</button>
-      <button id="auth-signup-btn">Sign Up for a 360 ID</button>
+      <button id="auth-login-btn">Log In</button>
+      <button id="auth-signup-btn">Sign Up</button>
       <!--Sign in with Google!-->
       <div id="g_id_signin" style="margin-top: 10px;"></div>
-      <!-- GitHub Sign-In Button -->
-<button id="github-login">
-  <svg viewBox="0 0 16 16" aria-hidden="true" width="20" height="20" fill="white" style="margin-right: 8px;">
-    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 
-      0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-      -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2
-      -3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82
-      .64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08
-      2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01
-      1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-  </svg>
-  Sign in with GitHub
-</button>
-
       <!-- Ending sign in UI!-->
       <p id="auth-error" class="auth-error"></p>
       
@@ -200,16 +126,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <main class="main">
     <section class="page active" id="page-main360">
       <div class="home-inner">
-        <div class="clock-pill"><span id="clockTime"> </span><small id="clockDate">Loading...</small></div>
+        <div class="clock-pill">
+            <span id="clockTime"></span>
+            <small id="clockDate">Loading...</small>
+        </div>
         <div class="logo-main"><span>360</span></div>
         <div class="weather-chip"><span>Weather:  </span><span id="homeWeatherText">Loading...</span></div>
         <label class="temp-toggle"><input type="checkbox" id="tempToggle"><span class="toggle-text">°C °F</span></label>
-        <script async src="https://cse.google.com/cse.js?cx=e003eb0834b6b4be8">
-</script>
-<div class="gcse-search"></div>        <audio id="clickSound" src="https://codehs.com/uploads/16faab8fd0f7195772f77bcfe0620de7" preload="auto"></audio>
+        <div class="search-shell"><div class="gcse-search"></div></div>
+        <audio id="clickSound" src="https://codehs.com/uploads/16faab8fd0f7195772f77bcfe0620de7" preload="auto"></audio>
         <audio id="bgMusic" src="https://codehs.com/uploads/67f63271a193390889e0c8567c1ccff4" loop hidden></audio>
         <div id="musicToggle">🔈 Music</div>
         <h5></h5>
+        <div id="open360" onclick="open360Search()">Open 360</div>
+        
+        <script>
+            function open360Search() {
+                const url = 'https://360-search.com';
+                const windowName = 'SearchWindow';
+                const features = 'width=1000,height=800,popup=yes,menubar=no,toolbar=no';
+                
+                window.open(url, windowName, features);
+            }
+        </script>
       </div>
     </section>
      <!-- Weather -->
@@ -218,13 +157,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <br><br>
       <h2>🌦️ Weather</h2>
       <form id="weatherForm" class="weather-form">
-        <input id="city" placeholder="Enter a city..." required />
-        <button type="submit">Check weather!</button>
+        <input id="city" placeholder="Enter city..." required />
+        <button type="submit">Check</button>
       </form>
       <br><br>
       <div id="weatherContent" class="weather-output">Waiting for input...</div>
       <div id="map" class="weather-map"></div>
-      <p class="muted">Powered by OpenWeatherMap & Leaflet OpenStreetMap</p>
+      <p class="muted">Powered by OpenWeatherMap & OpenStreetMap</p>
     </section>
     
     <!-- Chat System -->
@@ -236,7 +175,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div id="chat-window"></div>
       <br><br>
       <div id="chat-input-row">
-        <input type="text" id="message-input" placeholder="Type your message! Spamming, cursing, self-promotion or joining on an alt after a ban will result in ban from use of 360 apps." />
+        <input type="text" id="message-input" placeholder="Type your message..." />
         <button id="send-button">Send</button>
       </div>
     </section>
@@ -250,7 +189,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div id="chat"></div>
     
       <div id="input-area">
-        <input type="text" id="userInput" placeholder="Enter a message..." />
+        <input type="text" id="userInput" placeholder="Type a message..." />
         <button id="sendBtn">Send</button>
       </div>
     </section>
@@ -300,13 +239,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2>URL Shortener</h2>
       <div class="shortener-box">
         <input id="shortInput" placeholder="Paste URL..." />
-        <button id="shortBtn">Shorten URL!</button>
+        <button id="shortBtn">Shorten</button>
       </div>
-      <div id="shortResult">No link yet...</div>
+      <div id="shortResult">No link yet.</div>
     </section>
 
-  
-  <button id="installBtn" class="install-banner" style="display:none;">Install 360</button>
+    <!-- Stocks -->
+    <section class="page" id="page-stocks">
+      <button class="back-btn top-right">← Back</button>
+      <br><br>
+      <h2>📈 Stocks</h2>
+      <form id="stockForm">
+        <input id="ticker" placeholder="Enter ticker (e.g. AAPL)" required />
+        <button type="submit">Check</button>
+      </form>
+      <br><br>
+      <div id="quote" class="quote"></div>
+    </section>
+  </main>
+
+    
 
   <!-- Scripts -->
   </main>
@@ -317,46 +269,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="script.js"></script>
-  <script>
-  const map = L.map('map').setView([40.7128, -74.0060], 10); // Default to NYC
-
-  const baseLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
-
-  // Fullscreen control
-  map.addControl(new L.Control.Fullscreen());
-
-  // MiniMap
-  const miniMap = new L.Control.MiniMap(baseLayer, {
-    toggleDisplay: true,
-    minimized: false
-  }).addTo(map);
-
-  // Locate control
-  L.control.locate().addTo(map);
-
-  // OpenWeatherMap layers (replace with your API key)
-  const owmApiKey = 'c235c3c0b8aa90de94301809df9a50e4';
-
-  L.OWM.clouds({ opacity: 0.5, appId: owmApiKey }).addTo(map);
-  L.OWM.temperature({ opacity: 0.5, appId: owmApiKey }).addTo(map);
-  L.OWM.wind({ opacity: 0.5, appId: owmApiKey }).addTo(map);
-</script>
-<script>
-  fetch('https://api.rss2json.com/v1/api.json?rss_url=https://news.google.com/rss')
-    .then(res => res.json())
-    .then(data => {
-      const container = document.getElementById('news-feed');
-      data.items.slice(0, 5).forEach(item => {
-        const el = document.createElement('div');
-        el.innerHTML = `<a href="${item.link}" target="_blank">${item.title}</a>`;
-        el.className = 'news-item';
-        container.appendChild(el);
-      });
-    });
-</script>
-
 </body>
 </html>
 
