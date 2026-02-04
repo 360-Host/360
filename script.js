@@ -174,6 +174,8 @@ selectAll(".back-btn").forEach(b => {
     };
 });
 
+//Clock System
+
 setInterval(() => {
     const d = new Date();
     select("#clockTime").textContent = d.toLocaleTimeString([], {
@@ -646,7 +648,7 @@ authSignupBtn.addEventListener("click", async () => {
     authError.textContent = error.message;
   } else {
     //authError.textContent = "Check your email to confirm your account.";
-    authError.textContent = "✅ Success!!";
+    authError.textContent = "Check your email to confirm.";
   }
 });
 
@@ -733,38 +735,8 @@ chatSupabase.auth.onAuthStateChange((event, session) => {
     logoutBtn.style.display = "none";
   }
 });
-document.getElementById('setBgBtn').addEventListener('click', () => {
-  const fileInput = document.getElementById('bgUpload');
-  const urlInput = document.getElementById('bgUrl');
-  const file = fileInput.files[0];
-  const url = urlInput.value.trim();
 
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      applyBackground(e.target.result);
-    };
-    reader.readAsDataURL(file);
-  } else if (url) {
-    applyBackground(url);
-  } else {
-    alert('Upload a file or paste an image URL.');
-  }
-});
 
-function applyBackground(imageSrc) {
-  document.body.style.backgroundImage = `url('${imageSrc}')`;
-  document.body.style.backgroundSize = 'cover';
-  document.body.style.backgroundPosition = 'center';
-  document.body.style.backgroundAttachment = 'fixed';
-  localStorage.setItem('bgImage', imageSrc);
-}
-
-// Load saved background on page load
-window.addEventListener('DOMContentLoaded', () => {
-  const saved = localStorage.getItem('bgImage');
-  if (saved) applyBackground(saved);
-});
 
 
 
