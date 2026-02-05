@@ -1005,7 +1005,7 @@ html, body, * {
 }
 
 /* Glowing dot base style */
-#cursor {
+#cursor-dot {
   position: fixed;
   top: 0;
   left: 0;
@@ -1021,11 +1021,11 @@ html, body, * {
 }
 
 /* Enlarge on hover over clickable elements */
-a:hover ~ #cursor,
-button:hover ~ #cursor,
-input:hover ~ #cursor,
-textarea:hover ~ #cursor,
-label:hover ~ #cursor {
+a:hover ~ #cursor-dot,
+button:hover ~ #cursor-dot,
+input:hover ~ #cursor-dot,
+textarea:hover ~ #cursor-dot,
+label:hover ~ #cursor-dot {
   transform: translate(-50%, -50%) scale(1.8);
 }
 
